@@ -5,7 +5,7 @@ date: "`r format(Sys.Date(), '%d %B %Y')`" # What does this do? What is Sys.Date
 
 format: 
   gfm: 
-    toc: true # What is TOC in this scenerio? knit this template and see what happens when you turn it to false.
+    toc: true # What is TOC in this scenerio? Render this template and see what happens when you turn it to false.
     df_print: kable
 ---
 
@@ -40,7 +40,7 @@ This document will live in your final project folder in your repository alongsid
 
 # 1: Project Overview
 
-[Two or three sentences. What community, what question, what you are building. Assume your reader has not seen your proposal.]
+[Two or three sentences covering your hypothesis or what you are building. Assume your reader has not seen your proposal.]
 
 -----
 
@@ -48,11 +48,11 @@ This document will live in your final project folder in your repository alongsid
 
 <!-- For the section numbers above, remember to update if needed for multiple sources or removing unneeded subsections -->
 
-\[This section is the audit. It covers everything you went looking for. If you found sources that you chose not to use for the project itself, put them in! That helps me understand all the options you were considering as you worked through it\]
+\[This section covers everything you went looking for in your data audit. If you found sources that you chose not to use for the project itself, put them in! That helps your reader understand all the options you were considering as you worked through it.\]
 
 ## 2.1 Summary of sources
 
-\[Fill in one row per source you investigated. Include the ones you rejected in the `Using?` column. This table is the quick reference your reader checks before reading anything else. A clear table will give a reader a good idea of what the focus is beyond the overview\]
+\[Fill in one row per source you investigated. Include the ones you rejected in the `Using?` column. This table is the quick reference your reader checks before reading anything else. A clear table will give a reader a good idea of what the focus is beyond the overview.\]
 
 ```{r source-summary, echo=FALSE}
 sources <- tribble(
@@ -67,7 +67,7 @@ knitr::kable(sources)
 
 ## 2.2.1: \[name 1\]
 
-**Producer and authority.** \[Who made this dataset, and under what grant, mandate, or legal authority. Ex: If a municipality publishes it, which department, and are they required to? If a researcher published it, what grant was it under? If it's an open source publication from an organization, do they describe why it is published?\]
+**Producer and authority.** \[Who made this dataset, under what grant, mandate, legal authority, initiative, etc. Ex: If a municipality publishes it, which department, and were they required to? If a researcher published it, what grant was it under? If it's an open source publication from an organization, do they describe why it is published?\]
 
 **Original Dataset Purpose.** \[Why was this collected? The original author likely didn't have the exact same research question as you.\]
 
@@ -79,10 +79,13 @@ knitr::kable(sources)
 
 **Access.** \[How you got it, and whether a future user could get it the same way. Include the date you retrieved it if it is from a website, as sometimes web portals or search algorithms can change and make your first search method difficult to replicate.\]
 
-**Known problems.** \[What is wrong with it on a first look-through? Are there any missing years, survey answers, changed definitions, inconsistent identifiers, or NA values in the dataset?\]
+**Known problems.** \[What is wrong with it on a first look-through? Are there any missing years, survey answers, changed definitions, inconsistent identifiers, or NA values, etc. in the dataset?\]
 
 ```{r source-1-load}
 # Load the RAW file, as received into this code block. The code below when uncommented will read it from your final project / RProject folder, and show the first x (in this case I've piped to show 6) lines. Change as needed.
+
+##### IF FILTERING SENSITIVE DATA... so as not to show identifying information on GitHub, you can do that! I am not expecting you to have fully cleaned an entire dataset yet if you are working with large data.
+
 # Show the reader its actual shape.
 
 # raw_1 <- read_csv("data/raw/[filename].csv") # example for a csv file
@@ -101,9 +104,9 @@ knitr::kable(sources)
 
 ## 2.3: Investigated and rejected sources
 
-\[One or two sentences per rejected source: what it was, why you went looking. Some examples: licensing permissions, resolution mismatch, paywall, abandoned since 2017, aggregated beyond its usefulness, changed project idea, etc.
+\[One or two sentences per rejected source: what it was, why you checked it out. Some examples: licensing permissions, resolution mismatch, paywall, abandoned since 2017, aggregated beyond its usefulness, changed project idea, etc.
 
-A rejected source documented properly saves the next person the time you spent finding out the best source for your project. Negative results are not bad news!\]
+Documenting why a source was rejected saves the next person the time you spent finding out the best source for your project. Negative results are not bad news!\]
 
 ## 2.4: What I could not find
 
@@ -142,27 +145,27 @@ knitr::kable(licences)
 
 \[If your data does not describe people, say so explicitly and explain why you are confident of that then move on.\]
 
-**Consent.** \[If you collected it: what you told participants, what they agreed to, and how that was recorded. If someone else collected it: what were people told at the time, and does your use fall inside that? If it is your own data, what are you comfortable with people using it for in the future if someone else downloaded it?\]
+**Consent.** \[If you collected it: what participants agreed to your survey, and how was their data and consent was recorded. If someone else collected it: what were people told at the time, and does your use fall inside that? If it is your own data, what are you comfortable with people using it for in the future if someone else downloaded it?\]
 
-**Identifiability.** \[How many people are in the smallest reported cell? How small is the population of the place or community you are describing? If it does reference people's data in a public manner (sports stats like goals or time), that is public data. If it is a conversation from a person who did not consent for their interview to be shared, that is not.\]
+**Identifiability.** \[How many people are in the smallest reported cell? How small is the population of the place or community you are describing? If it does reference people's data in a public manner (sports stats like goals or time), that is public data. If it is a conversation from a person who did not consent for their interview to be shared, it's not.\]
 
-**What I will be doing with it.** \[Suppression of indentifiable information in your published dataset, aggregation to a coarser unit (bigger groups etc), withholding identifying variables, or a decision not to publish part of the dataset.\]
+**How sensitive data will be used.** \[Suppression of identifiable information in your published dataset, aggregation to a coarser unit (bigger groups etc), withholding identifying variables, or a decision not to publish part of the dataset.\]
 
 ---
 
 # 5: Exclusions and harms
 
-## 5.1: What I left out from this data audit
+## 5.1: Excluded data from the audit
 
-\[Every dataset that you publish shows what you thought was worth putting in, and what you decided to remove. List what you excluded and why. That could be things like rows, variables, time periods, places, categories. How could this exclusion affect your data points? \]
+\[Every published dataset will demonstrate what an author aimed to prioritize, and lack of data or missing data can show the same. If you removed a column of the unprocessed dataset, describe what it was, and why you decided to remove it. That could be things like sensitive variables, time periods, places, categories. How could this exclusion affect your data points in your analysis? \]
 
 ## 5.2: Who could be harmed
 
-\[Name a plausible misuse and who would be on the receiving end. Think about parties with an interest in your subject who are not the ones you built this for.\]
+\[Name a plausible misuse and who would be on the receiving end. Think about parties with an interest in the subject you chose, who are not your intended audience.\]
 
-## 5.3: What I would not release
+## 5.3: Unreleased working data
 
-\[If there is anything in your working data you would not publish, say what and why. If there is nothing, say that and describe why it is okay to publish the working / raw dataset.\]
+\[If there is anything in your working data you would not publish, say what it was and why. If there is nothing, describe why it is okay to publish the working / raw dataset.\]
 
 ---
 
@@ -172,23 +175,25 @@ knitr::kable(licences)
 
 **Who maintains it.** \[If nobody, say nobody.\]
 
-**Formats and dependencies.** \[Will your files open in ten years? Consider what could break if someone tried it in 2036. The package versions, data format, API, links to sources?\]
+**Formats and dependencies.** \[Will your files open in ten years? Consider what could break if someone tried it in 2036. The package versions, data format, API, links to sources etc.\]
 
-**Lifespan.** \[How long is this dataset meaningfully usable before it needs updating or should be retired?\]
+**Lifespan.** \[How long is this meaningfully usable before it needs updating or should be retired?\]
 
----
+-----
 
 # 7: Use of AI
 
 \[State plainly whether you have used AI tools on this project.
 
-Your `AI-LOG.md` will live in the repository root and is committed alongside the work it describes. Do not reproduce it here, but use a link such as `/log/AI-LOG.md` to point to it within your final project directory:\]
+Your `AI-LOG.md` will live in this repository and is committed alongside the work it describes. Do not reproduce it here, but use a link such as `/log/AI-LOG.md` to point to it within your final project directory:\]
 
 **AI log:** `AI-LOG.md` \[— maintained from \[starting date\] and committed alongside each stage of work.\]
 
 \[One short paragraph summarizing your pattern of AI use (if any) so far: which stages, what for, etc. State the model you are using, such as ChatGPT or Claude. If you are continuing to chat to a Gemeni search agent after looking something up, that counts too! If you have not used AI tools at all, say so here and make sure `AI-LOG.md` says the same.\]
 
 \[**Reminder: the text in this document must be written in your own words.**\]
+
+-----
 
 # 8: Session information
 
