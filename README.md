@@ -51,7 +51,7 @@ You don't have to organize your course documents in exactly the same way I have 
 2. Select `File > New Project`
 3. Click `Use Existing Directory` in the New Project window
 
-Voila! You now have a new RProject that should work the same as your existing Project.
+You now have a new RProject that should work the same as your existing Project.
 
 #### Housekeeping Tips
 
