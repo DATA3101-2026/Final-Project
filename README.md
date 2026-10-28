@@ -15,7 +15,7 @@ When you are presenting your project to your peers for testing the code, or pote
 Because of that, this repository has been set up as a template. That means that you are going to be creating a new repository for your final project within the DATA3101 organization. Here's the instructions:
 
 1) Navigate to the Final-Project repository in the Data3101 Organization
-2) To the right of the "Code" button above the file list, there's a new button titled `Use this template`. This will take you to a new window.
+2) To the right of the "Star" button above the file list, there's a new button titled `Use this template`. Click 'Create a New Repository`. This will take you to a new window.
 3) Select 'DATA3101-2026` as the repository owner
 4) Type in your repository name with the format as *Final-Project-FirstName-LastName* (replacing the names with your name).
 5) Choose repository visibility. If you want this to be moved to your personal GitHub profile later (making sure that you control how it exists past the class end date), make sure it is visible as `public` so that you can bring it out of our class' organization page.
