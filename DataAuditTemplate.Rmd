@@ -59,7 +59,7 @@ sources <- tribble(
   ~Source,            ~Producer,          ~Format,  ~Coverage,          ~Using,
   "[source name]",    "[organization]",   "[CSV]",  "[place, years]",   "Yes",
   "[source name]",    "[organization]",   "[PDF]",  "[place, years]",   "Yes",
-  "[source name]",    "[organization]",   "[API]",  "[place, years]",   "No — see 2.4"
+  "[source name]",    "[organization]",   "[API]",  "[place, years]",   "No, see 2.4"
 )
 
 knitr::kable(sources)
