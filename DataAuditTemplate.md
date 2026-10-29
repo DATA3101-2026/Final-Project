@@ -61,7 +61,7 @@ reader a good idea of what the focus is beyond the overview\]
 |:----------------|:-----------------|:--------|:-----------------|:-------------|
 | \[source name\] | \[organization\] | \[CSV\] | \[place, years\] | Yes          |
 | \[source name\] | \[organization\] | \[PDF\] | \[place, years\] | Yes          |
-| \[source name\] | \[organization\] | \[API\] | \[place, years\] | No — see 2.4 |
+| \[source name\] | \[organization\] | \[API\] | \[place, years\] | No, see 2.4 |
 
 ## 2.2.1: \[name 1\]
 
